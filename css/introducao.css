@@ -1,98 +1,55 @@
-.introducao-bg {
-  background-color: var(--bg-color-main);
-}
-
 .introducao {
   max-width: 1200px;
   padding: 40px 20px;
   margin: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   gap: 100px;
   align-items: center;
-  position: relative;
 }
 
 .introducao h1 {
-  font-family: var(--font-display);
   font-size: 4.5rem;
   line-height: 1.125;
   margin-bottom: 30px;
-  position: absolute;
-  max-width: 10ch;
-  text-shadow: 4px 4px 10px var(--bg-color-header-main);
-  top: 40px;
-  right: 0px;
-}
-
-.separador {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  justify-content: center;
-}
-
-.separador img {
-  max-width: 100%;
-}
-
-.desktop {
-  display: block;
-}
-
-.mobile {
-  display: none;
-}
-
-.who {
-  max-width: 1200px;
-  padding: 180px 20px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  gap: 100px;
-  align-items: center;
-}
-
-.who p {
-  font-family: var(--font-main);
-  font-size: 26px;
   position: relative;
+  max-width: 15ch;
 }
 
-.who p::before {
+.introducao h1::before {
   content: "";
-  display: inline-block;
-  background: url("../assets/desktop/separador-decorado-lbl.svg");
+  display: block;
+  width: 24px;
+  height: 347px;
+  background: url("../assets/detalhe.svg");
   position: absolute;
-  height: 824px;
-  width: 40px;
-  top: -150px;
+  top: -20px;
   left: -70px;
+}
+
+.local {
+  font-family: "Fira Code";
+}
+
+.introducao img {
+  height: auto;
 }
 
 @media (max-width: 1000px) {
   .introducao h1 {
     font-size: 3rem;
   }
-  .who p {
-    font-size: 20px;
-  }
+}
 
-  .who {
-    padding: 100px 20px;
-  }
-
-  .who p::before {
-    background: url("../assets/desktop/separador-decorado-lbl-mini.svg");
-    height: 480px;
-    width: 19px;
-    top: -50px;
-    left: -60px;
+@media (max-width: 998px) {
+  .introducao h1::before {
+    top: -60px;
   }
 }
 
 @media (max-width: 800px) {
   .introducao {
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
 
@@ -101,42 +58,22 @@
   }
 }
 
-@media (max-width: 550px) {
-  .introducao {
-    padding: 220px 20px;
-  }
+@media (max-width: 500px) {
   .introducao h1 {
-    margin-left: 20px;
-    font-size: 54px;
-    top: 70px;
-    right: 40px;
+    margin-left: 40px;
+    font-size: 2.5rem;
   }
 
-  .desktop {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  .who {
-    grid-template-columns: 1fr;
-  }
-
-  .who img {
-    display: none;
+  .introducao p {
+    margin-left: 40px;
   }
 
   .introducao h1::before {
-    content: "";
     display: block;
-    width: 66px;
-    height: 369px;
-    background: url("../assets/mobile/decorador-main.png");
-    position: absolute;
-    top: -50px;
-    left: -80px;
+    top: -20px;
+    left: -35px;
+    width: 17px;
+    height: 242px;
   }
 
   .introducao img {
@@ -144,42 +81,22 @@
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 400px) {
   .introducao {
-    padding: 220px 20px;
+    padding: 15px 1px;
   }
   .introducao h1 {
+    font-size: 2rem;
     margin-left: 40px;
-    right: 0px;
+  }
+
+  .introducao h1::before {
+    display: block;
+    top: -20px;
+    left: -35px;
+    width: 17px;
+    height: 242px;
   }
 }
 
-@media (max-width: 375px) {
-  .introducao h1 {
-    font-size: 48px;
-    margin-left: 40px;
-    max-width: 8ch;
-    right: -0px;
-  }
-}
-
-@media (max-width: 330px) {
-  .introducao h1 {
-    font-size: 48px;
-    margin-left: 40px;
-    max-width: 8ch;
-    right: -30px;
-  }
-}
-
-@media (max-width: 320px) {
-  .introducao h1 {
-    font-size: 40px;
-    margin-left: 40px;
-    max-width: 8ch;
-    right: 0px;
-    bottom: -20px;
-  }
-}
-
-/*menor tela suportada tem 315px de largura*/
+/*menor tela suportada tem 280px de largura*/

@@ -1,27 +1,7 @@
-:root {
-  /*fonts*/
-  --font-display: "Magical Horison", serif;
-  --font-main: "Source Sans 3", sans-serif;
-  /*colors*/
-  --color-font: #707070;
-  --bg-color-header-main: #9fc6f9;
-  --bg-color-main: #dae9fe;
-  --bg-grad-xp: linear-gradient(#eefbff, #ccf2ff);
-  --color-display-xp: #6ed7fa;
-  --bg-companies-xp: #ccf2ff;
-  --bg-abilities-xp: #aaeaff;
-  --bg-color-edu: #d6dbff;
-  --color-display-edu: #6e7efa;
-  --bg-item-edu: #a1acff;
-  --bg-color-hobbies: #e0beff;
-  --color-display-hobbies: #b96efa;
-  --color-display-port: #4418af;
-}
-
 body {
   margin: 0;
-  font-family: var(--font-main);
-  color: #707070;
+  font-family: "Fira Sans", Arial, sans-serif;
+  color: #141414;
 }
 
 h1,
@@ -42,8 +22,12 @@ img {
   display: block;
 }
 
-a {
-  text-decoration: none;
+.subtitulo {
+  font-size: 8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  word-break: break-all;
+  max-width: 4ch;
 }
 
 @media (max-width: 800px) {
